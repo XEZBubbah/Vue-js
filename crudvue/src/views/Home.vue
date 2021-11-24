@@ -105,7 +105,8 @@ export default {
     buscarProducto(){
 
       return this.productos.filter(item => {
-        return item.nombre.includes(this.txtBuscar);
+        //con el lowercase se puede hacer una busqueda sin importan mayusculas o minusculas
+        return item.nombre.toLowerCase().includes(this.txtBuscar.toLowerCase());
       })
 
     },
@@ -127,6 +128,9 @@ export default {
   .texto{
     margin: 0 auto;
     text-align: center;
+  }
+  h1 {
+    color: aqua;
   }
 
 </style>
